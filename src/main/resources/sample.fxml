@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgray;">
+         <children>
+            <TableView fx:id="animalsTable" layoutX="33.0" layoutY="14.0" prefHeight="266.0" prefWidth="535.0">
+              <columns>
+                <TableColumn fx:id="ColumnID" prefWidth="52.0" text="ID" />
+                <TableColumn fx:id="ColumnName" prefWidth="98.0" text="Имя" />
+                  <TableColumn fx:id="ColumnType" prefWidth="88.0" text="Тип" />
+                  <TableColumn fx:id="ColumnWeight" prefWidth="62.0" text="Вес" />
+                  <TableColumn fx:id="ColumnSterilized" prefWidth="98.0" text="Стерилизован" />
+                  <TableColumn fx:id="ColumnDate" prefWidth="135.0" text="Дата приема" />
+              </columns>
+            </TableView>
+            <ButtonBar layoutX="168.0" layoutY="280.0" prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#addAnimal" text="Добавить" />
+                  <Button mnemonicParsing="false" onAction="#editAnimal" text="Изменить" />
+                  <Button mnemonicParsing="false" onAction="#deleteAnimal" text="Удалить" />
+              </buttons>
+            </ButtonBar>
+            <Button fx:id="createReportButton" layoutX="292.0" layoutY="354.0" mnemonicParsing="false" text="Создать отчет" />
+            <Button fx:id="createExcelReportButton" layoutX="396.0" layoutY="354.0" mnemonicParsing="false" text="Выгрузить список животных" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
